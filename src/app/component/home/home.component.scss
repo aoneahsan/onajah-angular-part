@@ -1,0 +1,49 @@
+.home_banner_con {
+  background: url('./../../../assets/image/home-banner.jpg') no-repeat center;
+  min-height: 85vh;
+}
+.home_banner_text_con {
+  width: 44%;
+}
+.home_banner_text_con * {
+  color: white;
+}
+.home_banner_text_con h2 {
+  font-size: 3em;
+}
+.home_banner_text_con span {
+  font-size: 1.4em;
+  font-weight: 300;
+}
+/* banner below section CSS */
+.banner_below_con {
+	background: linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+	background: -webkit-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+  background: -moz-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+  background: -ms-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+  background: -o-linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%);
+}
+.banner_below_con i {
+    font-size: 40px;
+    position: relative;
+    top: -10px;
+}
+
+// home_section_1_con CSS
+.home_section_1_con .left_section_con {
+  background: #F7F8FA;
+  padding: 120px 40px;
+}
+.home_section_1_con .left_section_con span {
+  font-size: 19px;
+  font-weight: 300;
+}
+
+// Course carousel CSS
+
+// Responsive CSS
+@media all and (max-width: 1200px) {
+  .home_section_1_con .left_section_con {
+    padding: 80px 20px;
+  }
+}

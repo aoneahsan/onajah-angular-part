@@ -1,0 +1,53 @@
+<ngb-alert class="text-center custom_bg_color" type="info" [ngClass]="{'d-none': removeAlert}" dismissible='true' (close)="closeAlert()">
+  <div class="container text-light"><strong class="text-light">Start solving your challenge now</strong>| Enroll today and learn risk-free with our 30-day money-back guarantee.</div>
+</ngb-alert>
+<mat-toolbar class="header_con">
+  <div class="container-fluid">
+    <div class="logo_con d-inline-block text-center">
+        <a routerLink="/" class="">
+          <img class="col-12" src="./../../../../assets/image/onajah-logo.png">
+        </a>
+    </div>
+    <div class="category_btn_con d-inline-block p-0">
+      <div ngbDropdown class="d-inline-block" #category_menu="ngbDropdown">
+        <button class="btn_1" id="dropdownBasic1" (mouseenter)="category_menu.toggle();" ngbDropdownToggle>Categories</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Something else is here</button>
+          <div ngbDropdown placement="right" class="d-block dropright">
+            <button class="btn btn-primary w-100" id="dropdownBasic2" ngbDropdownToggle>Level One</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+              <button ngbDropdownItem>Action - 1</button>
+              <div ngbDropdown placement="right" class="d-block dropright">
+                <button class="btn btn-primary w-100" id="dropdownBasic2" ngbDropdownToggle>Level 2</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                  <button ngbDropdownItem>Action - 1</button>
+                </div>
+              </div>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search_form_con p-0 d-inline-block">
+      <form class="">
+        <input type="text" placeholder="Search for anything" class="col-11 p-0 d-inline-block bg-none">
+        <i class="material-icons d-inline-block bg-none text-center">search</i>
+      </form>
+    </div>
+    <div class="info_btns_con d-inline-block p-0">
+      <a routerLink="/sign-in" class="btn_1" *ngIf="!isAuth">Onajah for Business</a>
+      <a routerLink="/sign-up" class="btn_1" *ngIf="!isAuth">Teach on Onajah</a>
+    </div>
+    <div class="simple_border_con d-inline-block"></div>
+    <div class="signin_btn_con d-inline-block">
+      <a routerLink="/sign-in" class="btn_1" *ngIf="!isAuth">Log In</a>
+      <a routerLink="/sign-up" class="btn_1" *ngIf="!isAuth">Sign Up</a>
+    </div>
+    <div class="d-sm-none d-inline-block">
+      <button mat-icon-button (click)="sideBarToggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-toolbar>

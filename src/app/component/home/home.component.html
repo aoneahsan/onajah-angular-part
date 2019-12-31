@@ -1,0 +1,102 @@
+<div class="col-12 home_banner_con pt-5 pb-5">
+  <div class="container">
+    <div class="col-12 pt-5 pb-5 mt-5">
+      <div class="home_banner_text_con mt-4 pt-5">
+        <h2>Learn on your schedule</h2>
+        <span>Study any topic, anytime. Choose from thousands of expert-led courses now.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- banner below section start -->
+<div class="col-12 pl-0 pr-0 pt-3 pb-2 banner_below_con text-light">
+	<div class="container-fluid">
+		<div class="col-12 p-0">
+			<div class="col-12 col-md-4 d-inline-block p-0">
+				<div class="col-12 col-md-3 p-0 text-center d-inline-block">
+					<i class="fa fa-bullseye"></i>
+				</div>
+				<div class="col-12 col-md-9 text-center text-md-left p-0 d-inline-block">
+					<h4 class="text-light">10,000+ students enrolled</h4>
+					<p>Learn from anywhere in world</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 d-inline-block p-0">
+				<div class="col-12 col-md-3 p-0 text-center d-inline-block">
+					<i class="fa fa-search"></i>
+				</div>
+				<div class="col-12 col-md-9 text-center text-md-left p-0 d-inline-block">
+					<h4 class="text-light">Expert instruction</h4>
+					<p>Find the right instructor for you</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-4 d-inline-block p-0">
+				<div class="col-12 col-md-3 p-0 text-center d-inline-block">
+					<i class="fa fa-bullseye"></i>
+				</div>
+				<div class="col-12 col-md-9 text-center text-md-left p-0 d-inline-block">
+					<h4 class="text-light">Lifetime access</h4>
+					<p>Learn on your schedule</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- banner below section ends -->
+
+<!-- home_section_1_con || Course Tab Section 1 Starts -->
+<div class="col-12 pt-4 home_section_1_con">
+  <div class="container-fluid">
+    <div class="col-12 p-0">
+      <div class="col-md-3 col-lg-5 d-none d-md-inline-block left_section_con">
+        <h4>The world’s largest selection of courses</h4>
+        <span>Choose from over 100,000 online video courses with new additions published every month</span>
+      </div>
+      <div class="col-12 col-md-9 col-lg-7 d-inline-block vertical-align-top right_section_con">
+        <ngb-tabset justify="fill">
+          <ngb-tab title="Simple">
+            <ng-template ngbTabContent>
+              <ngb-carousel #carousel interval="1000" showNavigationArrows="true" showNavigationIndicators="false" pauseOnHover="true" (slide)="onSlide($event)">
+                <ng-template ngbSlide>
+                  <div class="pt-3 pb-3 pl-0 pr-0">
+                    <div class="col-4 pl-0 d-inline-block">
+                      <div class="course_img_con">
+                        <img class="w-100" src="https://picsum.photos/id/62/900/500" alt="">
+                      </div>
+                      <div class="course_short_detail_con p-2">
+                        <h5>{{ 'Course Name Course Name Course Name Course Name Course Name'.substring(0,34) }}...</h5>
+                        <span class="course_name f-w-300 f-s-12">{{ 'Course Provider Name Course Provider Name Course Provider Name'.substring(0,24) }}...</span>
+                        <div class="col-7 p-0 d-inline-block">
+                          <ng-template #t let-fill_name="fill">
+                            <span class="star" [class.full]="fill_name === 100">
+                              <span class="half" [style.width.%]="fill_name">&#9733;</span>&#9733;
+                            </span>
+                          </ng-template>
+                          <ngb-rating [(rate)]="currentRate" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating> {{ currentRate }}
+                        </div>
+                        <div class="col-5 p-0 d-inline-block">
+                          (17,008)
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-carousel>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle>Fancy</ng-template>
+            <ng-template ngbTabContent>Food</ng-template>
+          </ngb-tab>
+          <ngb-tab title="A very long nav title">
+            <ng-template ngbTabContent>
+              <p>Sed.</p>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- home_section_1_con || Course Tab Section 1 Ends -->
